@@ -24,6 +24,11 @@
         <body>
             <div style="background-color: #A4C8F0; width:100%;"> 
                 <h1>Search Category Name</h1>
+ <form name="formSearchActor" action="SearchCategoryByNameController" >
+
+                    Search by name: <input type="text" name="searchValue" value="" />
+
+                    <input type="submit" value="Search" name="SearchActor" />
 
                 <%
                     try {
@@ -51,6 +56,7 @@
                         <% } %>
                     </tbody>
                 </table>
+                    <br>
                 <%
 
                             }
@@ -65,12 +71,7 @@
                 %>
 
                
-                    <form name="formSearchActor" action="SearchCategoryByNameController" >
-
-                    Search by name: <input type="text" name="searchValue" value="" />
-
-                    <input type="submit" value="Search" name="SearchActor" />
-
+                   
                 </form>
                 <br>
         </body>

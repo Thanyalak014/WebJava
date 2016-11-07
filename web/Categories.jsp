@@ -8,6 +8,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <div style="background-color: #88BBDD; width:100%;"> 
+        <br>
     <a href="ListController">Category List</a>
         <a href="SearchController">Search Category By ID</a>
         <a href="SearchCategoryByNameController">Search Category By Name</a>
@@ -15,14 +17,14 @@
     <center>
     <body>
      
-        <div style="background-color: #FFBBCC; width:100%;"> 
+       <div style="background-color: #A4C8F0; width:100%;"> 
             <br />
-            <h2>Category Search</h2>
+            <h2>Search Category By ID</h2>
             <form name="searchForm" action="SearchController">
                 Enter Category ID:<input type="text" name="searchValue" value="" >
                 <input type="submit" value="Category Name" name="searchButton" />
             </form>
-
+            <br>
             <%
                 try {
                     // Create a session object if it is already not  created.

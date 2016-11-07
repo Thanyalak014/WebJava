@@ -8,13 +8,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    <div style="background-color: #88BBDD; width:100%;"> 
+        <br>
     <a href="ListController">Category List</a>
         <a href="SearchController">Search Category By ID</a>
         <a href="SearchCategoryByNameController">Search Category By Name</a>
         <a href="AddCategories.jsp">Add Category</a>
     <center>
     <body>
-        <div style="background-color: #FFBBCC; width:100%;"> 
+        <div style="background-color: #A4C8F0; width:100%;"> 
         <h1>Category List</h1>
 
         <%

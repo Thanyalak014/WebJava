@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2016 7:28:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="bookstore" name="bookshop.Publishers" optimistic-lock="version" table="publishers">
+    <id name="publisherId" type="string">
+      <column length="5" name="Publisher_Id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="30" name="Name"/>
+    </property>
+    <property name="url" type="string">
+      <column length="80" name="URL"/>
+    </property>
+  </class>
+</hibernate-mapping>

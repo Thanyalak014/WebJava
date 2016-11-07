@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2016 7:28:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="bookstore" name="bookshop.Booksauthors" optimistic-lock="version" table="booksauthors">
+    <composite-id class="bookshop.BooksauthorsId" name="id">
+      <key-property name="isbn" type="string">
+        <column length="13" name="ISBN"/>
+      </key-property>
+      <key-property name="authorId" type="string">
+        <column length="4" name="Author_Id"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="bookshop.Authors" fetch="select" insert="false" name="authors" update="false">
+      <column length="4" name="Author_Id" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="bookshop.Books" fetch="select" insert="false" name="books" update="false">
+      <column length="13" name="ISBN" not-null="true"/>
+    </many-to-one>
+    <property name="seqNo" type="java.lang.Integer">
+      <column name="Seq_No"/>
+    </property>
+  </class>
+</hibernate-mapping>

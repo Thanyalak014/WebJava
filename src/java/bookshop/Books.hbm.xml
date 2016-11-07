@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2016 7:28:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="bookstore" name="bookshop.Books" optimistic-lock="version" table="books">
+    <id name="isbn" type="string">
+      <column length="13" name="ISBN"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="title" type="string">
+      <column length="60" name="Title"/>
+    </property>
+    <property name="publisherId" type="string">
+      <column length="5" name="Publisher_Id"/>
+    </property>
+    <property name="categoryId" type="string">
+      <column length="5" name="CategoryID"/>
+    </property>
+    <property name="price" type="big_decimal">
+      <column name="Price" precision="10"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="booksauthorses" table="booksauthors">
+      <key>
+        <column length="13" name="ISBN" not-null="true"/>
+      </key>
+      <one-to-many class="bookshop.Booksauthors"/>
+    </set>
+  </class>
+</hibernate-mapping>

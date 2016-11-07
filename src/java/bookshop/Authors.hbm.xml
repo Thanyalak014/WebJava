@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2016 7:28:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="bookstore" name="bookshop.Authors" optimistic-lock="version" table="authors">
+    <id name="authorId" type="string">
+      <column length="4" name="Author_Id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="25" name="Name"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="booksauthorses" table="booksauthors">
+      <key>
+        <column length="4" name="Author_Id" not-null="true"/>
+      </key>
+      <one-to-many class="bookshop.Booksauthors"/>
+    </set>
+  </class>
+</hibernate-mapping>
